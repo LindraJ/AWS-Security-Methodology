@@ -1,5 +1,3 @@
-# My AWS Security Learning Journey
-
 
 # S3 Security Research - Lab Results
 
