@@ -1,22 +1,16 @@
+# AWS Security Methodology
 
-# S3 Security Research - Lab Results
-
-My journey learning AWS S3 security and bug hunting.
+I find complex AWS vulnerabilities others overlook 
+by thinking in systems — analyzing misalignments 
+between how AWS services claim to work and how 
+they actually behave.
 
 ## What's Here
-- Lab observations (7 hands-on labs)
-- External testing notes
-- Bug patterns discovered
-- FIND-FOCUS-FIRE framework
-
-## About This Research
-Day 1-5 of my security learning journey. Testing S3 permissions, 
-understanding authorization, and preparing for bug bounty hunting.
+- How-I-Think/ — my systems thinking framework
+- How-I-Work/ — my methodology
+- S3-Research/ — hands-on lab findings
+- Tools/ — scanners and automation (in progress)
 
 ## My Approach
-Learning by doing - hands-on labs, external testing with AWS CLI, 
-and documenting everything.
-
----
-
-*Building in public. Learning security. Finding bugs.*
+Learning by doing. Building in public. 
+Finding what others miss.
