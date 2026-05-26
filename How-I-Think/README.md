@@ -13,3 +13,20 @@ The goal is not just to understand Lambda as a service, but to understand:
 - and systemic security risk
 
 These maps are part of my broader effort to develop a structured AWS security methodology focused on understanding how cloud systems behave and how compromise propagates through interconnected services.
+
+## Key Concepts Practiced
+
+- Systems thinking
+- Security architecture reasoning
+- Leverage-point analysis
+- Misalignment detection
+- Blast-radius analysis
+- Behavioral feedback loops
+- Trust-boundary analysis
+
+## Current Goal
+
+Develop deep AWS/cloud security understanding through:
+- structured reasoning
+- visual systems mapping
+- and real-world architectural analysis
