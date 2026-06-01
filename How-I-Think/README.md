@@ -1,8 +1,8 @@
-# Lambda Systems Thinking
+# How I Think
 
-This folder contains my systems-thinking analysis of AWS Lambda.
+This folder contains my systems-thinking analysis of AWS services.
 
-The goal is not just to understand Lambda as a service, but to understand:
+The goal is not just to understand each service, but to understand:
 
 - behavioral dynamics
 - trust relationships
@@ -14,6 +14,32 @@ The goal is not just to understand Lambda as a service, but to understand:
 
 These maps are part of my broader effort to develop a structured AWS security methodology focused on understanding how cloud systems behave and how compromise propagates through interconnected services.
 
+---
+
+## Services Analyzed
+
+| Service | Behavioral Map | Trust/Permission Map | Assumption Analysis |
+|---------|---------------|---------------------|-------------------|
+| [Lambda](./Lambda/) | ✅ | ✅ | ✅ |
+| [S3](./S3/) | ✅ | ✅ | 🔄 In progress |
+
+---
+
+## The Three Maps
+
+Every service gets the same three maps:
+
+**1. Behavioral Stock/Flow Map**
+How does the service behave over time? What flows in, what flows out, what feedback loops control the system?
+
+**2. Trust/Permission Propagation Map**
+What trusts what? How does authority flow? Where are the leverage points and what happens if one is compromised?
+
+**3. Assumption Analysis**
+What does everyone assume is true? What breaks those assumptions? What's the blast radius when they fail?
+
+---
+
 ## Key Concepts Practiced
 
 - Systems thinking
@@ -24,9 +50,8 @@ These maps are part of my broader effort to develop a structured AWS security me
 - Behavioral feedback loops
 - Trust-boundary analysis
 
+---
+
 ## Current Goal
 
-Develop deep AWS/cloud security understanding through:
-- structured reasoning
-- visual systems mapping
-- and real-world architectural analysis
+Map every major AWS service using the same three-map framework — building a methodology for finding what others miss by understanding how systems actually behave, not how they're assumed to behave.
