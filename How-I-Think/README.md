@@ -21,7 +21,7 @@ These maps are part of my broader effort to develop a structured AWS security me
 | Service | Behavioral Map | Trust/Permission Map | Assumption Analysis |
 |---------|---------------|---------------------|-------------------|
 | [Lambda](./Lambda/) | ✅ | ✅ | ✅ |
-| [S3](./S3/) | ✅ | ✅ | 🔄 In progress |
+| [S3](./S3/) | ✅ | ✅ | ✅ |
 
 ---
 
