@@ -10,6 +10,7 @@ This isn't a course. It isn't a copied framework. It's built from scratch, one s
 
 I draw systems maps by hand for each AWS service before I touch a tool:
 
+- **Concept Map** — what is this service and how does it connect to its ecosystem?
 - **Behavioral Stock/Flow Map** — how does the service behave over time? What flows in, what flows out, what feedback loops exist?
 - **Trust/Permission Propagation Map** — what trusts what? How does authority flow? Where are the leverage points?
 - **Assumption Analysis** — what does everyone assume is true? What breaks those assumptions? What's the blast radius?
@@ -17,8 +18,12 @@ I draw systems maps by hand for each AWS service before I touch a tool:
 This forces me to understand the system before I look for vulnerabilities in it.
 
 **Services mapped so far:**
-- [Lambda](./How-I-Think/Lambda/)
-- [S3](./How-I-Think/S3/)
+
+| Service | Concept Map | Behavioral Map | Trust/Permission Map | Assumption Analysis |
+|---------|------------|---------------|---------------------|-------------------|
+| [Lambda](./How-I-Think/Lambda/) | ✅ | ✅ | ✅ | ✅ |
+| [S3](./How-I-Think/S3/) | ✅ | ✅ | ✅ | ✅ |
+| [Fargate](./How-I-Think/Fargate/) | ✅ | 🔄 | 🔄 | 🔄 |
 
 ---
 
