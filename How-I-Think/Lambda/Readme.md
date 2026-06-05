@@ -18,6 +18,11 @@ These maps are part of my broader effort to develop a structured AWS security me
 
 ## Maps
 
+### Lambda Concept Map
+A visual reference showing how Lambda connects to its ecosystem — triggers, execution roles, AWS resources, and the relationships between them. Built before the analytical maps to establish the full picture.
+
+---
+
 ### Lambda Behavioral Stock/Flow Map
 Focuses on:
 - triggers
