@@ -19,6 +19,11 @@ These maps are part of my broader effort to develop a structured AWS security me
 
 ## Maps
 
+### S3 Concept Map
+A visual reference showing how S3 connects to its ecosystem — principals, access control layers, objects, and the relationships between them. Built before the analytical maps to establish the full picture.
+
+---
+
 ### S3 Behavioral Stock/Flow Map
 Focuses on:
 - PUT/GET/DELETE request flows
@@ -65,3 +70,8 @@ Questions explored:
 - What happens when Block Public Access is off but no policy exists?
 - How does the timeline bug expose old objects?
 - How far can an attacker move if a single assumption fails?
+
+---
+
+## Lab Results
+Real hands-on lab findings that validated the systems maps. Seven labs testing S3 access control behavior from first principles, plus external enumeration practice on flaws.cloud.
