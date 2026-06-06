@@ -22,7 +22,7 @@ These maps are part of my broader effort to develop a structured AWS security me
 |---------|------------|---------------|---------------------|-------------------|
 | [Lambda](./Lambda/) | ✅ | ✅ | ✅ | ✅ |
 | [S3](./S3/) | ✅ | ✅ | ✅ | ✅ |
-| [Fargate](./Fargate/) | ✅ | 🔄 | 🔄 | 🔄 |
+| [Fargate](./Fargate/) | ✅ | ✅ | 🔄 | 🔄 |
 
 ---
 
