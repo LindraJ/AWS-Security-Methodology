@@ -31,8 +31,20 @@ Key relationships captured:
 
 ---
 
-### Fargate Behavioral Stock/Flow Map
-*In progress*
+### Fargate Behavioral Stock/Flow Map ✅
+Focuses on:
+- running tasks and services (stock)
+- ECS as the controller of both inflow and outflow
+- input valves: Task Definition, VPC/Security Groups, Task Role, Platform Version
+- output valves: ECS Health Check, Service Auto Scaling, Platform Version Retirement
+- Service Auto Scaling balancing loop with delay (B)
+- Platform Version Retirement balancing loop (B)
+- leverage points: Access Controls and Task/Execution categories
+Questions explored:
+- What controls whether a task starts or stops?
+- Why does output matter as much as input?
+- What feedback loops automatically manage running tasks?
+- Where do misconfigurations silently expose the system?
 
 ---
 
