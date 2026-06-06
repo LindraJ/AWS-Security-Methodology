@@ -23,7 +23,7 @@ This forces me to understand the system before I look for vulnerabilities in it.
 |---------|------------|---------------|---------------------|-------------------|
 | [Lambda](./How-I-Think/Lambda/) | ✅ | ✅ | ✅ | ✅ |
 | [S3](./How-I-Think/S3/) | ✅ | ✅ | ✅ | ✅ |
-| [Fargate](./How-I-Think/Fargate/) | ✅ | 🔄 | 🔄 | 🔄 |
+| [Fargate](./How-I-Think/Fargate/) | ✅ | ✅ | 🔄 | 🔄 |
 
 ---
 
