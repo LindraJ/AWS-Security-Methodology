@@ -48,8 +48,8 @@ Questions explored:
 
 ---
 
-### Fargate Trust / Permission Propagation Map
-*In progress*
+### Fargate Trust / Permission Propagation Map ✅
+Focuses on two trust paths — legitimate (Person/System/Service → ECS → Fargate → Task Role) and attack path (SSRF → metadata endpoint → Task Role credentials). Four leverage points: Task Role, SSRF via vulnerable app, ECR permissions, ECS control plane.
 
 ---
 
