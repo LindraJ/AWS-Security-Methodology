@@ -53,5 +53,11 @@ Focuses on two trust paths — legitimate (Person/System/Service → ECS → Far
 
 ---
 
-### Fargate Assumption Analysis
-*In progress*
+### Fargate Assumption Analysis ✅
+Focuses on four assumptions developers make about Fargate security:
+- App code inside containers is safe from external manipulation
+- ECR is private and only authorized accounts can access it
+- Only the legitimate Fargate task uses the Task Role credentials
+- Tasks automatically run on the latest patched platform version
+
+Each assumption mapped to what breaks it, resulting attacker behavior, and impact rating.
