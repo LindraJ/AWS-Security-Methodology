@@ -1,2 +1,3 @@
 config.json
-
+# temporary: remove after values move to config.json
+*.csv
