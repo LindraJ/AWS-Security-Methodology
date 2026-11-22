@@ -1,5 +1,6 @@
 import boto3
 import json
+import time
 
 
 def getRoleSession():
@@ -16,10 +17,7 @@ def getRoleSession():
     sts = session.client("sts")
 
     # 3. Assume the audit role
-    response = sts.assume_role(
-        RoleArn=roleARN,
-        RoleSessionName=sessionName
-    )
+    response = sts.assume_role(RoleArn=roleARN, RoleSessionName=sessionName)
 
     # 4. Put on the role's badge
     creds = response["Credentials"]
@@ -34,4 +32,17 @@ def getRoleSession():
 if __name__ == "__main__":
     roleSession = getRoleSession()
     identity = roleSession.client("sts").get_caller_identity()
-    print("Running as:", identity["Arn"])
+    iamConnection = roleSession.client("iam")
+    generateCredReport = iamConnection.generate_credential_report()
+    retries = 1
+
+    while generateCredReport["State"] != "COMPLETE" and retries <= 3:
+        time.sleep(120)
+        generateCredReport = iamConnection.generate_credential_report()
+        retries += 1
+
+    if generateCredReport["State"] == "COMPLETE":
+        credReport = iamConnection.get_credential_report()
+        print(credReport["Content"].decode("utf-8"))
+    else:
+        print("Report not ready after 3 tries.")
