@@ -1,3 +1,4 @@
 config.json
+__pycache__/
 # temporary: remove after values move to config.json
 *.csv

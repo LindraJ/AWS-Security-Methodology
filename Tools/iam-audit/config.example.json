@@ -3,6 +3,8 @@
         "profileName": "YOUR_SSO_PROFILE",
         "roleArn": "arn:aws:iam::ACCOUNT_ID:role/IAMAuditRole",
         "sessionName": "iam-audit-tool"
-
+    },
+    "accessAdvisor": {
+        "granularity": "SERVICE_LEVEL"
     }
 }

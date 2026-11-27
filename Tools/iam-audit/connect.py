@@ -1,23 +1,21 @@
 import boto3
 import json
-import time
+import generateReport
 
-
-def getRoleSession():
-    # 1. Read the config
+def configSettings():
+     # 1. Read the config
     with open("config.json") as f:
         config = json.load(f)
+    return config
 
-    myProfile = config["connection"]["profileName"]
-    roleARN = config["connection"]["roleArn"]
-    sessionName = config["connection"]["sessionName"]
+def getRoleSession(profile, arn, nameSession):
 
     # 2. Sign in wth sso
-    session = boto3.Session(profile_name=myProfile)
+    session = boto3.Session(profile_name=profile)
     sts = session.client("sts")
 
     # 3. Assume the audit role
-    response = sts.assume_role(RoleArn=roleARN, RoleSessionName=sessionName)
+    response = sts.assume_role(RoleArn=arn, RoleSessionName=nameSession)
 
     # 4. Put on the role's badge
     creds = response["Credentials"]
@@ -30,19 +28,15 @@ def getRoleSession():
 
 
 if __name__ == "__main__":
-    roleSession = getRoleSession()
+    config = configSettings()
+    
+    myProfile = config["connection"]["profileName"]
+    roleARN = config["connection"]["roleArn"]
+    sessionName = config["connection"]["sessionName"]
+    
+    roleSession = getRoleSession(myProfile, roleARN, sessionName)
     identity = roleSession.client("sts").get_caller_identity()
-    iamConnection = roleSession.client("iam")
-    generateCredReport = iamConnection.generate_credential_report()
-    retries = 1
-
-    while generateCredReport["State"] != "COMPLETE" and retries <= 3:
-        time.sleep(120)
-        generateCredReport = iamConnection.generate_credential_report()
-        retries += 1
-
-    if generateCredReport["State"] == "COMPLETE":
-        credReport = iamConnection.get_credential_report()
-        print(credReport["Content"].decode("utf-8"))
-    else:
-        print("Report not ready after 3 tries.")
+    
+    rows = generateReport.credReport(roleSession)
+    for row in rows:
+        print(row["user"], row["mfa_active"])
